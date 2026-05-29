@@ -278,6 +278,43 @@
         }
         .screenshot-scroll img:hover { transform: scale(1.03); }
 
+        .phone-frame {
+            position: relative;
+            flex-shrink: 0;
+            scroll-snap-align: center;
+            padding: 12px 10px;
+            background: linear-gradient(145deg, #1f1040, #0a0218);
+            border-radius: 36px;
+            border: 2px solid rgba(255,255,255,0.08);
+            box-shadow: 0 18px 50px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.04);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .phone-frame::before {
+            content: "";
+            position: absolute;
+            top: 14px; left: 50%;
+            transform: translateX(-50%);
+            width: 70px; height: 16px;
+            background: #000;
+            border-radius: 0 0 12px 12px;
+            z-index: 2;
+        }
+        .phone-frame img {
+            display: block;
+            width: 240px;
+            height: 482px;
+            object-fit: cover;
+            border-radius: 26px;
+            box-shadow: none;
+        }
+        .phone-frame:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(102,126,234,0.35), inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+        @media (max-width: 600px) {
+            .phone-frame img { width: 200px; height: 402px; }
+        }
+
         /* ── Features ── */
         .features {
             background: linear-gradient(180deg, #1a0533 0%, #2d1054 100%);
@@ -650,6 +687,7 @@
         </a>
         <div class="nav-links">
             <a href="#trailer">Trailer</a>
+            <a href="#screenshots">Screenshots</a>
             <a href="#features">Features</a>
             <a href="#worlds">Worlds</a>
             <a href="#studio">Studio</a>
@@ -704,7 +742,20 @@
         </div>
     </section>
 
-    <!-- Screenshots section temporarily removed, awaiting new screenshots -->
+    <!-- Screenshots -->
+    <section class="screenshots reveal" id="screenshots">
+        <h2 class="section-title">Screenshots</h2>
+        <p class="section-subtitle">A peek inside the journey.</p>
+        <div class="screenshot-scroll" role="list">
+            <div class="phone-frame" role="listitem"><img src="images/screenshot_1.png" alt="Block Star Journey screenshot 1" loading="lazy" width="240" height="482"></div>
+            <div class="phone-frame" role="listitem"><img src="images/screenshot_2.png" alt="Block Star Journey screenshot 2" loading="lazy" width="240" height="482"></div>
+            <div class="phone-frame" role="listitem"><img src="images/screenshot_3.png" alt="Block Star Journey screenshot 3" loading="lazy" width="240" height="482"></div>
+            <div class="phone-frame" role="listitem"><img src="images/screenshot_4.png" alt="Block Star Journey screenshot 4" loading="lazy" width="240" height="482"></div>
+            <div class="phone-frame" role="listitem"><img src="images/screenshot_5.png" alt="Block Star Journey screenshot 5" loading="lazy" width="240" height="482"></div>
+            <div class="phone-frame" role="listitem"><img src="images/screenshot_6.png" alt="Block Star Journey screenshot 6" loading="lazy" width="240" height="482"></div>
+            <div class="phone-frame" role="listitem"><img src="images/screenshot_7.png" alt="Block Star Journey screenshot 7" loading="lazy" width="240" height="482"></div>
+        </div>
+    </section>
 
     <!-- Stats strip -->
     <section class="stats" aria-label="Game stats">
