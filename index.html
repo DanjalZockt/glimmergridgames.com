@@ -165,7 +165,7 @@
             height: 60px;
         }
 
-        /* ── Trailer ── */
+        /* ── Trailer (v2 landscape) ── */
         .trailer {
             background: linear-gradient(180deg, #0a0014 0%, #0f0020 100%);
             padding: 80px 20px;
@@ -173,11 +173,11 @@
         }
 
         .trailer-wrapper {
-            max-width: 720px;
+            max-width: 800px;
+            width: 100%;
             margin: 0 auto;
+            aspect-ratio: 16 / 9;
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(102, 126, 234, 0.35),
@@ -186,8 +186,7 @@
 
         .trailer-wrapper iframe {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
             border: 0;
